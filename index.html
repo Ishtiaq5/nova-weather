@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nova Weather — a dark premium weather dashboard concept UI with live-feeling mock data.">
+  <title>Nova Weather — Premium Weather UI</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Nova Weather home">
+      <span class="brand-mark" aria-hidden="true">✦</span> Nova<span class="grad-text">Weather</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#details">Details</a>
+      <a href="#forecast">Forecast</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">Concept UI · Live-feeling mock data</p>
+      <h1 id="hero-title">Sky intelligence,<br><span class="grad-text">beautifully rendered.</span></h1>
+      <form class="city-form" role="search" aria-label="City search" id="city-form">
+        <label class="visually-hidden" for="city-input">City name</label>
+        <input id="city-input" type="text" placeholder="Try Karachi, Tokyo, Oslo…" autocomplete="off">
+        <button type="submit" aria-label="Search city">Search</button>
+      </form>
+    </section>
+
+    <section class="now-card glass" aria-labelledby="now-title">
+      <div class="now-left">
+        <p class="city" id="now-title">Karachi, PK</p>
+        <p class="condition" id="condition">Clear Night</p>
+        <p class="temp"><span id="temp">31</span><span class="deg" aria-hidden="true">°</span></p>
+        <p class="feels">Feels like <span id="feels">34</span>°</p>
+      </div>
+      <div class="now-right">
+        <div class="weather-icon" id="weather-icon" aria-hidden="true">☀️</div>
+        <p class="clock" aria-label="Local time"><span id="clock">--:--:--</span></p>
+        <p class="updated" id="updated">Updated just now</p>
+      </div>
+    </section>
+
+    <section id="details" class="stats-grid" aria-label="Current weather details">
+      <article class="stat glass"><span class="stat-label">Humidity</span><span class="stat-value"><span id="humidity">—</span>%</span><span class="stat-bar"><i id="bar-humidity"></i></span></article>
+      <article class="stat glass"><span class="stat-label">Wind</span><span class="stat-value"><span id="wind">—</span> km/h</span><span class="stat-bar"><i id="bar-wind"></i></span></article>
+      <article class="stat glass"><span class="stat-label">UV Index</span><span class="stat-value" id="uv">—</span><span class="stat-bar"><i id="bar-uv"></i></span></article>
+      <article class="stat glass"><span class="stat-label">Visibility</span><span class="stat-value"><span id="vis">—</span> km</span><span class="stat-bar"><i id="bar-vis"></i></span></article>
+    </section>
+
+    <section id="forecast" class="forecast" aria-labelledby="hourly-title">
+      <h2 id="hourly-title">Next 12 hours</h2>
+      <div class="hourly" id="hourly" role="list"></div>
+      <h2>5-day outlook</h2>
+      <div class="daily" id="daily" role="list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Nova Weather — a UI concept. Data is simulated in-browser. Built with vanilla HTML/CSS/JS.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
